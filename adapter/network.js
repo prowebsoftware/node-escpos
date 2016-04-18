@@ -1,12 +1,22 @@
-var Network = function(address, port){
-  this.device = null;
+var net = require('net');
+
+var Network = function(address, port, cb){
+	this.device = new net.Socket();
+	this.port = port;
+	this.address = address;
+	
+	this.device.connect(this.port, this.address, function() {
+	    cb();
+	});
+	
 };
 
 Network.prototype.open = function(){
-  this.device.open.apply(this, arguments);
+	//this.device.open.apply(this, arguments);
 };
 Network.prototype.write = function(){
-  this.device.write.apply(this, arguments);
+	// set the scope to be the socket
+  	this.device.write.apply(this.device, arguments);
 };
 
 module.exports = Network;
