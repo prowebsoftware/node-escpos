@@ -19,7 +19,9 @@
   "dependencies": {
     "get-pixels": "*",
     "iconv-lite": "*",
-    "lodash": "*",
+    "lodash": "*"
+  },
+  "ACremovedDependencyAsFailingCompileOnHeroku": {
     "usb": "*"
   }
 }
