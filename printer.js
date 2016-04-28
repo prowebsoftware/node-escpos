@@ -10,6 +10,7 @@ var Printer = function(adapter){
   this.adapter = adapter;
   this.adapter.open();
 };
+
 /**
  * [function print]
  * @param  {[type]}   content  [description]
