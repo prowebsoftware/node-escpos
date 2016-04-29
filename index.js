@@ -5,6 +5,6 @@ exports.CONSTANTS = require('./constants');
 exports.Printer   = require('./printer');
 
 // USB
-exports.USB       = require('./adapter/usb');
+//exports.USB       = require('./adapter/usb');
 
 exports.Network = require('./adapter/network');
